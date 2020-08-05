@@ -21,3 +21,7 @@ C:\Users\Pipi\Desktop\50\Dan_L_Nemanja_Pilipovic\Zadatak_1\bin\Debug\EntityFrame
 C:\Users\Pipi\Desktop\50\Dan_L_Nemanja_Pilipovic\Zadatak_1\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Pipi\Desktop\50\Dan_L_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Zadatak_1_Content.g.cs
 C:\Users\Pipi\Desktop\50\Dan_L_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Zadatak_1.csproj.CopyComplete
+C:\Users\Pipi\Desktop\50\Dan_L_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\UserView.g.cs
+C:\Users\Pipi\Desktop\50\Dan_L_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\UserView.baml
+C:\Users\Pipi\Desktop\50\Dan_L_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\AddSongView.g.cs
+C:\Users\Pipi\Desktop\50\Dan_L_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\AddSongView.baml

@@ -1,0 +1,42 @@
+﻿<Window x:Class="Zadatak_1.Views.UserView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadatak_1.Views"
+        mc:Ignorable="d"
+        Title="User" Height="450" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Column="1" Grid.Row="1" Name="btnAddSong" Content="Add new Song" Height="20" Width="100" HorizontalAlignment="Left"
+                Command="{Binding AddSong, UpdateSourceTrigger=PropertyChanged}" Margin="0,10,0,0"/>
+
+        <Grid Grid.Column="1" Grid.Row="2" Height="auto" Width="auto">
+            <DataGrid x:Name="AllSongs" ItemsSource="{Binding Songs, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False"
+                      IsReadOnly="True" HeadersVisibility="Column" Margin="0,10,0,0" SelectedItem="{Binding Song, UpdateSourceTrigger=PropertyChanged}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Song Name" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Song Author" Binding="{Binding Author}"/>
+                    <DataGridTextColumn Header="Length in Seconds" Binding="{Binding SecondsLength}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>
