@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Zadatak_1.Models;
 using Zadatak_1.ViewModels;
+using Zadatak_1.Views;
 
 namespace Zadatak_1
 {
@@ -21,6 +11,9 @@ namespace Zadatak_1
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private bool _logged;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +22,35 @@ namespace Zadatak_1
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            
+            try
+            {
+                using(AudioPlayerDbEntities db = new AudioPlayerDbEntities())
+                {
+                    foreach (tblUser user in db.tblUsers)
+                    {
+                        if(user.Username == txtUsername.Text && user.Password == txtPassword.Password)
+                        {
+                            _logged = true;
+                            UserView view = new UserView();
+                            view.ShowDialog();
+                            break;
+                        }
+                        else
+                        {
+                            continue; ;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+
+            if(_logged == false)
+            {
+                MessageBox.Show("Username or Password Incorrect.");
+            }
         }
     }
 }

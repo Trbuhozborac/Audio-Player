@@ -117,7 +117,14 @@ namespace Zadatak_1.ViewModels
 
         private bool CanSaveExecute()
         {
-            return true;            
+            if(String.IsNullOrEmpty(User.Username) || String.IsNullOrEmpty(User.Password))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void CloseExecute()

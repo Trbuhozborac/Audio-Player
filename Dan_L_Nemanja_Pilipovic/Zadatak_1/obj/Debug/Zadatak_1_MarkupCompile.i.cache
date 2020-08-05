@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Pipi\Desktop\50\Dan_L_Nemanja_Pilipovic\Zadatak_1\App.xaml
-2-213795682
+4-1821413686
 2815860220
-16-2006635826
+20-2057946151
 18-929960137
-MainWindow.xaml;Views\RegisterView.xaml;
+MainWindow.xaml;Views\AddSongView.xaml;Views\RegisterView.xaml;Views\UserView.xaml;
 
-False
+True
 
