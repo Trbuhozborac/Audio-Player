@@ -2,7 +2,7 @@ IF DB_ID('AudioPlayerDb') IS NULL
 CREATE DATABASE AudioPlayerDb
 GO
 
-USE HotelDB
+USE AudioPlayerDb
 IF EXISTS (SELECT NAME FROM sys.sysobjects WHERE NAME = 'tblSong')
 DROP TABLE tblSong
 IF EXISTS (SELECT NAME FROM sys.sysobjects WHERE NAME = 'tblUser')
