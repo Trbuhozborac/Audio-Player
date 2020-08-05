@@ -3,10 +3,10 @@ CREATE DATABASE AudioPlayerDb
 GO
 
 USE HotelDB
-IF EXISTS (SELECT NAME FROM sys.sysobjects WHERE NAME = 'tblUser')
-DROP TABLE tblUser
 IF EXISTS (SELECT NAME FROM sys.sysobjects WHERE NAME = 'tblSong')
 DROP TABLE tblSong
+IF EXISTS (SELECT NAME FROM sys.sysobjects WHERE NAME = 'tblUser')
+DROP TABLE tblUser
 
 CREATE TABLE tblUser(
 Id INT PRIMARY KEY IDENTITY (1,1),
